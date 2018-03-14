@@ -47,7 +47,7 @@
     "sNetAddressPrefixes": "10.0.0.0/24",
     "vmPrivateIP": "10.0.0.5",
     "_artifactsLocation": "https://raw.githubusercontent.com/agnnn/jenkinsarm/master/",
-    "_extensionScript": "install-jenkins.sh",
+    "_extensionScript": "install_jenkins.sh",
     "_artifactsLocationSasToken": ""
   },
   "resources": [
@@ -215,7 +215,7 @@
             "autoUpgradeMinorVersion": true,
             "settings": {
               "fileUris": [
-                "[concat(variables('_artifactsLocation'), variables('_extensionScript'), variables('_artifactsLocationSasToken'))]"
+                "[concat(variables('_artifactsLocation'), '/jenkins/', variables('_extensionScript'), variables('_artifactsLocationSasToken'))]"
               ]
             },
             "protectedSettings": {
